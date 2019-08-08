@@ -3,7 +3,7 @@ node {
    stage('Preparation') { 
 			checkout scm
             mvnHome = tool 'Maven'
-            dir('OverViewerFX') {
+            dir('OverviewerFX') {
                 if (isUnix()) {
                 sh "'${mvnHome}/bin/mvn' clean"
             } else {
@@ -11,7 +11,7 @@ node {
             }
             }
         }
-	dir('OverViewerFX') {
+	dir('OverviewerFX') {
         
 		stage('Build') {
             if (isUnix()) {
